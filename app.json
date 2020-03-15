@@ -1,13 +1,12 @@
 {
   "pages": [
-    "pages/goods/goodsinfo",
     "pages/index/index",
     "pages/order/order",
     "pages/mine/mine",
     "pages/sort/sort",
     "pages/car/car",
     "pages/followshop/followshop",
-    
+    "pages/goods/goodsinfo",
     "pages/index/search",
     "pages/wbview/wbview",
     "pages/error/error",
