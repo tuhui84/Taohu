@@ -1,0 +1,85 @@
+.search{
+  width: 100%;
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+.searchtab{
+  background-color: #F7F7F7;
+  height: 40px;
+  line-height: 40px;
+  /* margin: 10px; */
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 20px;
+}
+.searchtab input{
+  height: 40px;
+  margin-left: 14px;
+}
+.searchicon{
+  position: absolute;
+  top: -2px;
+  right: 8px;
+}
+.search_count{
+  font-size: 14px;
+  color: #999;
+  margin-top: 10px;
+}
+
+/* 商品列表 */
+.search_list{
+  margin-top: 10px;
+}
+.search_list  .goodsinfo{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid #DEDEDE;
+  padding-bottom: 14px;
+}
+.search_list .goodsinfo image{
+  flex: 1;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+.search_list .goodsinfo .detail_info{
+  flex: 2;
+  overflow: hidden;
+  margin-left: 10px;
+}
+.detail_info .sketch_title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 30px;
+  font-size: 16px;
+}
+.detail_info .intro{
+  color: #999;
+  font-size: 14px;
+  margin: 10px 0 30px;
+}
+.price_sell_info {
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+  padding-right: 10px;
+}
+.price_sell_info .nowprice{
+  font-size: 12px;
+  color: #E22626;
+}
+.price_sell_info .nowprice text{
+  font-size: 14px;
+}
+.price_sell_info .oldprice{
+  color: #999;
+  font-size: 12px;
+  text-decoration: line-through;
+  margin-left: -50px;
+}
+.price_sell_info .sellnum{
+  color: #999;
+  font-size: 12px;
+}

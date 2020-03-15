@@ -1,0 +1,6 @@
+.title_small {
+  font-size: 28rpx;
+  display: block;
+  color: #9d9d9d;
+  margin-top: 5rpx;
+}

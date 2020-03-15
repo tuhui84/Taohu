@@ -1,0 +1,48 @@
+<view wx:if="{{bAuthorizeShow}}">
+  <view wx:if="{{canIUse}}">
+
+    <block wx:if="{{!bVerify}}">
+      <view class='header'>
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+
+      <view class='content'>
+        <view class='text-large'>申请获取以下权限</view>
+        <text>获得你的公开信息(昵称，头像等)</text>
+      </view>
+
+      <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+        授权登录
+      </button>
+    </block>
+    <block wx:else>
+      <view class='imagesize'>
+        <image src="/image/login_bg.jpg" class='in-image'> </image>
+        <button class='bVerifybottom' type="primary"  bindtap="bindGetUerInfoVerity">
+              确认
+        </button>
+      </view> 
+    </block>
+  </view>
+  <view wx:else>请升级微信版本</view>
+</view>
+<view wx:else>
+  <scroll-view>
+    <view class="list" wx:for="{{shops}}" wx:key="{{index}}">
+      <view class="info" data-url='{{item.url}}' data-title='{{item.name}}' bindtap='goshop'>
+        <view class="content-head">
+          <view>
+            <image class="navimg1" src="{{item.avatar}}"></image>
+          </view>
+          <view>
+            <view class="title">{{item.name}}</view>
+          </view>
+        </view>
+
+        <view class="content-info">店铺类型：{{item.type}}</view>
+        <view class="content-info">地址：{{item.address}}</view>
+      </view>
+      <image class="navimg" src="{{item.shopimg}}"></image>
+    </view>
+  </scroll-view>
+</view>

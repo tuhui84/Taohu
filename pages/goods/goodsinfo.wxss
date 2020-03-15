@@ -1,0 +1,345 @@
+/* pages/goods/goodsinfo.wxss */
+.padd_l_r{
+  padding-left: 28rpx;
+  padding-right: 28rpx;
+  box-sizing:border-box;
+}
+.goodsinfo{
+  position: relative;
+}
+.goods_banner{
+  width: 100%;
+}
+swiper{
+  height: 780rpx;
+}
+.goods_banner .bannerimg>view{
+  height: 0;
+  width: 100%;
+  position: relative;
+  padding-top: 100%;
+}
+.goods_banner .bannerimg image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
+.sketch .sketch_title{
+  font-size: 32rpx;
+  color: #121010;
+  white-space: nowrap;  
+  text-overflow:ellipsis; 
+  overflow:hidden;
+}
+.sketch .goods_sketch{
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 28rpx;
+  margin-bottom: 28rpx;
+}
+.sketch .goods_price{
+  width: 100%;
+  border-bottom: 2rpx solid #DEDEDE;
+  margin-right: 28rpx;
+  padding-bottom: 28rpx;
+}
+.sketch .goods_price:after{
+  width: 0;
+  height: 0;
+  content: "";
+  display: block;
+  clear: both;
+}
+.sketch .goods_price .pricenow{
+  display: inline;
+  font-size: 20rpx;
+  text-align: center;
+  color: #E22626;
+}
+.sketch .goods_price .pricenow .price{
+  display: inline;
+  font-size: 32rpx;
+}
+.sketch .goods_price .priceold{
+  display: inline;
+  font-size: 20rpx;
+  color: #999;
+  margin-left: 12rpx;
+  text-decoration:line-through;
+}
+.sketch .goods_price .salenum{
+  display: block;
+  float: right;
+  color: #999;
+  font-size: 24rpx;
+  margin-top: 12rpx;
+  
+}
+.sketch .discount_coll{
+  margin-top: 28rpx;
+}
+.sketch .discount_coll .discount{
+  display: inline;
+  font-size: 28rpx;
+  color: #61B615;
+}
+.sketch .discount_coll .coll{
+  display: inline-block;
+  font-size: 24rpx;
+  color: #999;
+  float: right;
+  margin-top: 8rpx;
+  margin-right: 8rpx;
+}
+.separate{
+  width: 100%;
+  height: 20rpx;
+  background-color: #F7F7F7;
+  margin-top: 28rpx;
+}
+.info_content{
+  width: 100%;
+}
+.info_content .info_title{
+  width: 100%;
+  font-size: 32rpx;
+  /* overflow: hidden; */
+}
+.info_content .info_title:after{
+  width: 0;
+  height: 0;
+  content: "";
+  display: block;
+  clear: both;
+}
+.info_titlebox{
+  border-bottom: 2rpx solid #DEDEDE;
+}
+.info_content .info_title>view{
+  line-height: 60rpx;
+  float: left;
+  margin-left: 28rpx;
+  position: relative;
+  bottom: -2rpx;
+  left: 0;
+  z-index: 1;
+}
+.current{
+  border-bottom: 4rpx solid #4C7FF4;
+  color: #4C7FF4;
+}
+.everycontent{
+  padding-bottom: 200rpx;
+}
+.everycontent .goods_info_content{
+  width: 100%;
+  margin-top: 16rpx;
+}
+.everycontent .goods_info_content .title{
+  margin-bottom: 12rpx
+}
+.everycontent .goods_info_content .img{
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+}
+
+
+
+.everycontent .goods_info_content image{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin-top: 16rpx;
+}
+/* 购买须知 */
+.everycontent .buynotice_content{
+  width: 100%;
+  margin-top: 16rpx;
+}
+.everycontent .buynotice_content .title{
+  margin-bottom: 12rpx;
+}
+.everycontent .buynotice_content .noticeinfo>view{
+  font-size: 24rpx;
+  line-height: 40rpx;
+}
+.everycontent .buynotice_content .noticeinfo>view:nth-of-type(odd){
+  color: #999;
+  font-size: 28rpx;
+}
+/* 商家信息 */
+.everycontent .business_info{
+  width: 100%;
+  margin-top: 16rpx;
+}
+.everycontent .business_info .title{
+  margin-bottom: 12rpx;
+}
+.everycontent .business_info .noticeinfo>view{
+  font-size: 24rpx;
+  line-height: 40rpx;
+}
+.everycontent .business_info .noticeinfo>view:nth-of-type(odd){
+  color: #999;
+  font-size: 28rpx;
+}
+/* 加入购物车、购买 */
+.togar_buy{
+  width: 100%;
+  margin-top: 20rpx;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  background-color: #fff;
+}
+.togar_buy .footbox{
+  background-color: #ccc;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 10rpx 0;
+}
+.togar_buy .footbox .toshop image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.togar_buy .footbox .addcar{
+  line-height: 82rpx;
+}
+.togar_buy .footbox .nowbuy{
+  line-height: 82rpx;
+}
+.togar_buy .footbox>view{
+  text-align: center;
+  font-size: 28rpx;
+}
+.togar_buy .buyinfo{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #ccc;
+  opacity: 0.6;
+}
+@keyframes show{
+  from {bottom: -800rpx;}
+  to{bottom: 0;}
+}
+
+.togar_buy .infobox{
+  width: 100%;
+  height: 1000rpx;
+  animation: show 0.3s;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  background-color: #fff;
+  padding: 12rpx 28rpx 40rpx;
+  box-sizing: border-box;
+  
+}
+.togar_buy .infobox .tocancel{
+  overflow: hidden;
+}
+.togar_buy .infobox .cancel{
+  float: right;
+}
+.togar_buy .infobox .goodsinfo{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 4rpx solid #DEDEDE;
+  padding-bottom: 28rpx;
+}
+.togar_buy .infobox .goodsinfo image{
+  flex: 1;
+  width: 100px;
+  height: 100px;
+  border-radius: 10rpx;
+}
+.togar_buy .infobox .goodsinfo .detail_info{
+  flex: 2;
+  overflow: hidden;
+  margin-left: 12rpx;
+}
+.detail_info .sketch_title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 60rpx;
+  font-size: 32rpx;
+}
+.detail_info .stock{
+  color: #999;
+  font-size: 28rpx;
+  margin: 10px 0 60rpx;
+}
+.price_sell_info {
+  display: flex;
+  justify-content: space-between;
+  line-height: 40rpx;
+  padding-right: 20rpx;
+}
+.price_sell_info .nowprice{
+  font-size: 24rpx;
+  color: #E22626;
+}
+.price_sell_info .nowprice text{
+  font-size: 28rpx;
+}
+.price_sell_info .oldprice{
+  color: #999;
+  font-size: 24rpx;
+  text-decoration: line-through;
+  margin-left: -100rpx;
+}
+.price_sell_info .sellnum{
+  color: #999;
+  font-size: 24rpx;
+}
+.specs{
+  margin-top: 20rpx;
+}
+.specs .good_type{
+  font-size: 28rpx;
+}
+.specs .type{
+  padding-top: 20rpx;
+}
+.infobox .buynum{
+  /* display: flex; */
+  /* justify-content: space-between; */
+  margin-top: 20rpx;
+
+}
+.infobox .buynum .add_sub{
+  margin-top: 20rpx;
+}
+.footbtn{
+  width: 100%;
+  box-sizing: border-box;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  margin-top: 40rpx;
+  position: fixed;
+  bottom: 40rpx;
+  left: 0;
+  padding: 0 40rpx;
+}
+.footbtn view{
+  width: 100%;
+  background-color: #FFD600;
+  color: #fff;
+  text-align: center;
+  line-height: 72rpx;
+  border-radius: 40rpx;
+}
+

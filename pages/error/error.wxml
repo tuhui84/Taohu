@@ -1,0 +1,18 @@
+<scroll-view scroll-y="true">
+    <view class="container">
+        <image src="{{logo}}" background-size="cover" style="width: 380rpx;  height: 150rpx;"></image>
+
+
+        <view style="margin:60rpx;0rpx;0rpx;0rpx;">
+            <text class="title" style="font-weight:550;padding-bottom:30rpx;">对不起,{{info}}</text>
+
+            <view style="margin:30rpx 0rpx 0rpx 0rpx">
+                <text class="title_small">如需帮助,请以如下方式联系</text>
+                <text class="title_small">联系电话:{{mobile}}</text>
+                <text class="title_small">联系微信:{{weixin}}</text>
+            </view>
+        </view>
+
+
+    </view>
+</scroll-view>

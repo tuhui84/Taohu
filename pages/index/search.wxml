@@ -1,0 +1,24 @@
+<view class="search">
+  <view class="searchtab">
+    <input type="text" maxlength="-1" bindinput="ongetinfo"></input>
+    <i-icon size="30" class="searchicon" type="search" bindtap="onsearch"/>
+  </view>
+  <view class="search_count">
+    搜索结果：34
+  </view>
+  <view class="search_list">
+    <view class="goodsinfo">
+        <image src="{{info.car_img}}"></image>
+        <view class="detail_info">
+          <view class="sketch_title">{{info.sketch.sketch_title}}</view>
+          <view class="intro">{{info.sketch.describe}}</view>
+          <view class="price_sell_info">
+            <view class="nowprice">￥<text>{{info.sketch.pricenow}}</text></view>
+            <view class="oldprice">￥<text>{{info.sketch.priceold}}</text></view>
+            <view class="sellnum">已售{{info.sketch.salenum}}</view>
+          </view>
+        </view>
+      </view>
+  </view>
+</view>
+

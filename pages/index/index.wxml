@@ -1,0 +1,54 @@
+<!--pages/index/index.wxml-->
+<view class="topbar">
+  <navigator url="./search" class="search">
+    <icon type="search" size="20"></icon>    搜索
+  </navigator>
+</view>
+<view class="title">
+    <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+        <block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+            <view class="nav-item {{currentTab == idx ?'active':''}}"  data-current="{{idx}}" bindtap="switchNav">
+				<text>{{navItem}}</text>
+		</view>
+        </block>        
+    </scroll-view>
+    <view class="shopactive" wx:if="{{!currentTab}}">
+      <swiper indicator-dots autoplay>
+        <navigator><swiper-item><image src="/image/banner1.png"></image></swiper-item></navigator>
+        <navigator><swiper-item><image src="/image/banner1.png"></image></swiper-item></navigator>
+        <navigator><swiper-item><image src="/image/banner1.png"></image></swiper-item></navigator>
+      </swiper>
+      <view class="toshop">
+        <view class="shopinfo">
+          <image src="/image/logo1.jpg"></image>
+          <view class="namedel">
+            <view>都乐果蔬京东自营旗舰店</view>
+            <view>400-88820</view>
+          </view>
+        </view>
+        <view class="collect"><button>关注店铺</button></view>
+      </view>
+    </view>
+    <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">        
+      <swiper-item class="tab-content" wx:for="{{navData}}">
+        <navigator wx:for="{{describe}}">
+          <view class="goods" bindtap="onGoodsTap" data-name="{{item.name}}" data-des="{{item.describe}}" data-np="{{item.cur_price}}" data-op="{{item.or_price}}" data-sn="{{item.sold}}" data-imgurl="{{item.album.url}}">
+            <view class="goodsimg"><image src="{{item.album.tumb_url}}"></image></view>
+            <view class="name">{{item.name}}</view>
+            <view class="describe">{{item.describe}}</view>
+            <view class="nowprice">￥<text>{{item.cur_price}}</text></view>
+            <view class="oldprice">原价<text>{{item.or_price}}</text></view>
+            <view class="salenum">已售<text>{{item.sold}}</text></view>
+          </view> 
+        </navigator>
+      </swiper-item>
+      
+    </swiper>
+</view>
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index",
+    "i-input-number": "../../dist/input-number/index",
+    "i-tag": "../../dist/tag/index"
+  },
+  "navigationBarTitleText": "商品详情"
+  
+}

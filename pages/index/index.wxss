@@ -1,0 +1,159 @@
+/* pages/index/index.wxss */
+.topbar{
+  width: 100%;
+  height: 110rpx;
+  background-color: #F7F7F7;
+  overflow: hidden;
+}
+.search{
+  margin: 20rpx 40rpx;
+  color: #999999;
+  padding: 12rpx 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  font-size: 36rpx;
+}
+.currten{
+  border-bottom: 4rpx solid #FFC600;
+  color: #FFC600;
+}
+page{
+    width: 100%;
+    height: 100%;
+}
+.title{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: #fff;
+}
+.nav {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 80rpx;
+    background: #fff;
+    font-size: 34rpx;
+    white-space: nowrap;
+}
+.nav-item {
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+}
+.nav-item.active{
+    color: #FFC600;
+}
+.tab-box{
+    height: 100%;
+    box-sizing: border-box;
+}
+.tab-content{
+    overflow-y: scroll;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    padding: 4rpx 10rpx;
+    box-sizing: border-box;
+    background-color: #F7F7F7;
+    width: 100%;
+    height: 100%;
+}
+.shopactive{
+  margin-top: 6rpx;
+}
+.shopactive image{
+  width: 100%; 
+  height: 400rpx;
+}
+.toshop{
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 16rpx 20rpx;
+  font-size: 26rpx;
+}
+.toshop .collect{
+  margin-top: 5rpx;
+}
+.toshop .collect button{
+  width: 120rpx;
+  line-height: 40rpx;
+  font-size: 22rpx;
+  padding: 0;
+  background-color: #fff;
+  border: 2rpx solid #FFC600;
+  color: #FFC600;
+  border-radius: 40rpx;
+}
+.toshop .shopinfo image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  display: inline-block;
+}
+.toshop .shopinfo .namedel{
+  display: inline-block;
+  padding-left: 12rpx;
+}
+.toshop .shopinfo .namedel view:nth-child(2){
+  color: #999;
+}
+.tab-content navigator{
+  box-sizing: border-box;
+  background-color: white;
+  flex: 0 0 48%;
+  font-size: 24rpx;
+  border-radius: 20rpx;
+  margin-top: 12rpx;
+  overflow: hidden;
+  padding-left: 12rpx;
+}
+.tab-content .goods{
+  background-color: white;
+  height: 520rpx;
+  overflow: hidden;
+}
+.tab-content .goods .goodsimg{
+  width: 100%;
+  height: 60%;
+}
+.tab-content .goods image{
+  width: 100%;
+  height: 100%;
+}
+.tab-content .goods .name{
+  color: #121010;
+  white-space: nowrap;  
+  text-overflow:ellipsis; 
+  overflow:hidden;
+  margin-top: 12rpx;
+}
+.tab-content .goods .describe{
+  padding: 12rpx 0;
+  color: #999;
+}
+.tab-content .goods .nowprice{
+  display: inline-block;
+  color: #F45454;
+}
+.tab-content .goods .oldprice{
+  display: inline-block;
+  color: #999999;
+  margin-left: 12rpx;
+}
+.tab-content .goods .nowprice text{
+  font-size: 24rpx;
+  font-weight: 600;
+  
+}
+.tab-content .goods .oldprice text{
+  margin-left: 4rpx;
+  text-decoration:line-through;
+}
+.tab-content .goods .salenum{
+  padding-top: 6rpx;
+  color: #666666;
+}
+
