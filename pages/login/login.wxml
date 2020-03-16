@@ -1,0 +1,9 @@
+<!--pages/login/login.wxml-->
+<view class="login">
+  <view class="logo">
+    <image src="/image/logo.png"></image>
+  </view>
+  <button class="loginbtn" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信一键登录 </button>
+  <button class="gettel" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" >手机号码登录</button> 
+</view>
+

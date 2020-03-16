@@ -1,10 +1,11 @@
 <!--pages/goods/goodsinfo.wxml-->
+<import src="./template/spell.wxml"/>
 <view class="goodsinfo">
 <!-- 轮播 -->
   <view class="goods_banner">
     <swiper autoplay="true" indicator-dots="true" interval="3000">
       <swiper-item class="bannerimg" wx:for="{{info.bannerimg}}">
-        <view><image class="goodsimg" src="{{item}}"></image></view>
+        <view><image class="goodsimg" bindtap="onlarge" src="{{item}}"></image></view>
       </swiper-item>
     </swiper>
   </view>
@@ -21,11 +22,30 @@
       <view class="discount">
         超值优惠
       </view>
-      <!-- <view class="coll" bindtap="oncoll">
-        {{isColl?'已收藏':'收藏'}}
-      </view> -->
       <view class="clear"></view>
     </view>
+  </view>
+  <view class="separate"></view>
+  <view wx:if="{{isspell}}" class="spellinfo">
+    <template is="spell" data="{{showspell}}"></template>
+    <view class="title">
+      <view>这些人购买成功了，可参与拼单</view>
+      <view class="seeall">查看全部<i-icon type="enter" size="14"/></view>
+    </view>
+    <view class="spelluser">
+      <view class="userinfo">
+        <view><image src="/image/logo1.jpg"></image></view>
+        <view class="username">轻松购物</view>
+      </view>
+      <view class="join_seeall">
+        <view class="diff_time">
+          <view>还差3人拼成</view>
+          <view>剩余22:55:12.5</view>
+        </view>
+        <view class="gospell">去拼单</view>
+      </view>
+    </view>
+    
   </view>
   <view class="separate"></view>
   <!-- 详情 -->
@@ -76,12 +96,23 @@
       <!-- <view class="addcar" bindtap="onaddcar">加入购物车</view>
       <view bindtap="onfoucus">{{isfocus?'已关注':'关注商家'}}</view> -->
       <view class="toshop">
-        <image src="/image/tabbar/shop_out.png"></image>
+        <i-icon type="shop_fill" size="20"/>
         <view>店铺</view>
       </view>
-      <view class="coll"></view>
-      <view class="addcar" bindtap="onaddcar">加入购物车</view>
-      <view class="nowbuy">立即购买</view>
+      <view class="coll">
+        <i-icon type="like" size="20" color="red"/>
+        <view>收藏</view>
+      </view>
+      <view wx:if="{{isspell}}" class="alonebuy leftbtn" bindtap="onaddcar">
+        <view>￥22</view>
+        <view>单独购买</view>
+      </view>
+      <view wx:if="{{isspell}}" class="spellbuy rightbtn">
+        <view>￥19</view>
+        <view>发起拼单</view>
+      </view>
+      <view wx:if="{{!isspell}}" class="addcar leftbtn" bindtap="onaddcar">加入购物车</view>
+      <view wx:if="{{!isspell}}" class="nowbuy rightbtn">立即购买</view>
     </view>
     <view class="buyinfo" bindtap="ongodown" style="display:{{show_or_dis==true?'block':'none'}}"></view>
     <view class="infobox" style="display:{{show_or_dis==true?'block':'none'}}">
@@ -98,11 +129,12 @@
           </view>
         </view>
       </view>
-      <view class="specs" wx:for="{{tagstab}}">
-        <view class="good_type">{{item}}</view>
+     <view class="specs" wx:for="{{tagsinfo}}" wx:for-index="key" >
+        <view class="good_type">{{item.tagstab}}</view>
         <view class="type">
           <i-tag 
-            wx:for="{{tags}}" 
+            data-key="{{key}}"
+            wx:for="{{item.tag}}" 
             wx:key="{{index}}"
             bindchange="onChange" 
             checkable="{{true}}" 

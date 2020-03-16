@@ -6,29 +6,47 @@ Page({
    * 页面的初始数据
    */
   data: {
+    // 蒙层显示隐藏
+    showspell:false,
+    // 是否有拼团
+    isspell:true,
     // 底部加入购物车隐藏显示数据
     show_or_dis:false,
     goodsnum: 1,
     oneChecked: false,
     // 商品规格
-    tagstab:["颜色","类型"],
-    tags: [
-      {
-        name: '大号',
-        checked: true,
-        color: 'red'
+    tagsinfo: {
+      color: {
+        tagstab: "颜色",
+        tag: [
+          {
+            name: '红色',
+            checked: true,
+            color: 'red'
+          },
+          {
+            name: '绿色',
+            checked: false,
+            color: 'red'
+          }
+        ]
       },
-      {
-        name: '中号',
-        checked: false,
-        color: 'red'
-      },
-      {
-        name: '小号',
-        checked: false,
-        color: 'red'
+      size: {
+        tagstab: "规格",
+        tag: [
+          {
+            name: '大号',
+            checked: false,
+            color: 'red'
+          },
+          {
+            name: '小号',
+            checked: false,
+            color: 'red'
+          }
+        ]
       }
-    ],
+    },
     // 收藏、关注
     isColl:false,
     isfocus:false,
@@ -60,6 +78,14 @@ Page({
       thr: false
     }
   },
+  // 图片放大
+  onlarge(e) {
+    var murl = e.currentTarget.dataset.src
+    wx.previewImage({
+      current: murl, // 当前显示图片的http链接
+      urls: this.data.info.bannerimg// 需要预览的图片http链接列表
+    })
+  },
   // 点击收藏
   oncoll(){
     this.setData({
@@ -90,16 +116,16 @@ Page({
     })
   },
   onChange(event) {
-    
+    var key = event.currentTarget.dataset.key
     const detail = event.detail;
-    var tags = this.data.tags;
+    var tags = this.data.tagsinfo[key].tag;
     var arr = []
-    for (var i = 0; i < tags.length;i++){
+    for (var i = 0; i < tags.length; i++) {
       var ischecked = tags[i].checked
       if (ischecked == true) {
         tags[i].checked = false
         arr.push(tags[i])
-      }else{
+      } else {
         arr.push(tags[i])
       }
     }
@@ -109,9 +135,12 @@ Page({
         arr[i].checked = true
       }
     }
+    console.log(arr);
+    var tagsinfo = 'tagsinfo.' + key + '.tag'
     this.setData({
-      tags:arr
+      [tagsinfo]: arr
     })
+    console.log(this.data.tagsinfo[key].tag)
     
 
   },

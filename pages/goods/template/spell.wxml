@@ -1,0 +1,21 @@
+<!--pages/goods/template/buyinfo.wxml-->
+<template name="spell">
+  <view class="spallframe" wx:if="{{isshow}}">
+  <!-- 蒙层 -->
+    <view class="frame"></view>
+    <view class="mid">
+      <view class="back"><i-icon type="close" size="20" /></view>
+      <view class="spelltitle">参与***的拼单</view>
+      <view class="condition">还差2人拼单成功，剩余22:55:12.5后结束</view>
+      <view class="user_headimg">
+        <view><image src="/image/logo1.jpg"></image></view>
+        <view><image src="/image/logo1.jpg"></image></view>
+        <view><image src="/image/logo1.jpg"></image></view>
+      </view>
+      <view class="confirm">
+        参与拼单
+      </view>
+    </view>
+    
+  </view>
+</template>

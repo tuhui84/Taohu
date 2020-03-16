@@ -1,2 +1,107 @@
-<!--pages/mine/mine.wxml-->
-<web-view src="https://m.kaidzs666.com/testnewpc/index.html#/membercenter/id"></web-view>
+
+<view class="mine_title">
+  <view class="userinfo">
+    <view class="headimg" wx:if="{{userInfo}}"><image src="{{userInfo.avatarUrl}}" mode="cover"></image></view>
+    <view class="myinfo">
+      <view class="myname">{{userInfo.nickName}}</view>
+      <view class="vip" wx:if="{{hasUserInfo}}">VIP2</view>
+    </view>
+    <navigator wx:if="{{!hasUserInfo}}" url="/pages/login/login"><view class="tologin">登录/注册</view></navigator>
+  </view>
+  <view class="recharge">
+    <view class="point">
+      充值消费码
+    </view>
+    <view class="code">
+      <!-- <image src="/image/code.jpg"></image> -->
+      <image bindtap="onlarge" data-src="https://test-pc.kaidzs666.com/cache/file/jpg/2020_03_04/403ae5bee818e08195d8aeaedc5f07203e3eaa5c_jpg.jpg" src="https://test-pc.kaidzs666.com/cache/file/jpg/2020_03_04/403ae5bee818e08195d8aeaedc5f07203e3eaa5c_jpg.jpg"></image>
+    </view>
+  </view>
+</view>
+<view class="mine_body">
+  <view class="i_have bgfff br_10">
+    <view class="money">
+      <view>￥100</view>
+      <view>金额</view>
+    </view>
+    <view>
+      <view>5</view>
+      <view>优惠券</view>
+    </view>
+  </view>
+  <view class="i_property bgfff br_10">
+    <view class="title">我的资产</view>
+    <view class="prop_list">
+      <navigator>
+        <i-badge count="2">
+          <view>
+            <image src="/image/mine/wait_payment.png"></image>
+            <view>待付款</view>
+          </view>
+        </i-badge>
+      </navigator>
+     <navigator>
+        <i-badge count="5">
+          <view>
+            <image src="/image/mine/wait_send.png"></image>
+            <view>待发货</view>
+          </view>
+        </i-badge>
+      </navigator>
+      <navigator>
+        <i-badge count="6">
+          <view>
+            <image src="/image/mine/wait_received.png"></image>
+            <view>待收货</view>
+          </view>
+        </i-badge>
+      </navigator>
+      <navigator>
+        <i-badge count="3">
+          <view>
+            <image src="/image/mine/isok.png"></image>
+            <view>已完成</view>
+          </view>
+        </i-badge>
+      </navigator>
+      <navigator>
+        <i-badge count="0">
+          <view>
+            <image src="/image/mine/return.png"></image>
+            <view>退货</view>
+          </view>
+        </i-badge>
+      </navigator>
+    </view>
+  </view>
+  <view class="i_list bgfff br_10">
+    <navigator>
+      <view class="sub">
+        <image src="/image/mine/myinifo.png"></image>
+        <view>我的信息</view>
+        <image class="tojump" src="/image/mine/next.png"></image>
+      </view>
+    </navigator>
+    <navigator>
+      <view class="sub">
+        <image src="/image/mine/myorder.png"></image>
+        <view>交易记录</view>
+        <image class="tojump" src="/image/mine/next.png"></image>
+      </view>
+    </navigator>
+    <navigator>
+      <view class="sub">
+        <image src="/image/mine/myactive.png"></image>
+        <view>我的活动</view>
+        <image class="tojump" src="/image/mine/next.png"></image>
+      </view>
+    </navigator>
+    <navigator>
+      <view class="sub">
+        <image src="/image/mine/applyshop.png"></image>
+        <view>适用门店</view>
+        <image class="tojump" src="/image/mine/next.png"></image>
+      </view>
+    </navigator>
+  </view>
+</view>

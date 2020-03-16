@@ -1,0 +1,38 @@
+/* pages/login/login.wxss */
+.logo{
+  margin: 100rpx auto;
+  width: 380rpx;
+  height: 150rpx;
+  
+}
+.logo image{
+  width: 100%;
+  height: 100%;
+}
+.login{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.login .loginbtn{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  border-radius: 50rpx;
+  color: #fff;
+}
+.gettel{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 30rpx auto;
+  font-size: 30rpx;
+  border-radius: 50rpx;
+  color: #fff;
+  background-color: #ccc;
+}
+button::after{
+  border: none;
+}

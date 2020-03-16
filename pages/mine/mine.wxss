@@ -1,42 +1,147 @@
-/* pages/mine/mine.wxss */
 page{
-    width: 100%;
-    height: 100%;
+  background-color: #F7F7F7;
 }
-.container{
-    width: 100%;
-    height: 100%;
-    display: block;
-    padding: 0;
-    background-color: #fff;
+.mine_title{
+  width: 100%;
+  box-sizing: border-box;
+  height: 300rpx;
+  background-color: #FFC600;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
 }
-.nav {
-    height: 80rpx;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-    line-height: 80rpx;
-    background: #f7f7f7;
-    font-size: 16px;
-    white-space: nowrap;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 99;
+.mine_title .userinfo{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60rpx;
 }
-.nav-item {
-    width: 20%;
-    display: inline-block;
-    text-align: center;
+.mine_title .userinfo .headimg{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 2px solid #E4B100;
+  overflow: hidden;
+ 
 }
-.nav-item.active{
-    color: red;
+.mine_title .userinfo .headimg image{
+  width: 100%;
+  height: 100%;
 }
-.tab-box{
-    padding-top: 80rpx;
-    height: 100%;
-    box-sizing: border-box;
+.mine_title .userinfo .myinfo{
+  margin-left: 20rpx;
+  margin-top: 14rpx;
 }
-.tab-content{
-    overflow-y: scroll;
+.mine_title .userinfo .myinfo>view{
+  color: #111010;
 }
+.mine_title .userinfo .myinfo .vip{
+  font-size: 24rpx;
+  background-color: #E4B100;
+  border-radius: 20rpx;
+  width: 80rpx;
+  text-align: center;
+  margin-top: 10rpx;
+}
+.mine_title .recharge {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100rpx;
+}
+.mine_title .recharge .point{
+  border-radius: 20rpx;
+  background-color: #E4B100;
+  line-height: 30rpx;
+  padding: 6rpx 16rpx;
+  font-size: 24rpx;
+  height: 30rpx;
+  margin-top: 16rpx;
+  margin-right: 30rpx;
+}
+.mine_title .recharge .code{
+  width: 70rpx;
+  height: 70rpx;
+  padding: 2rpx;
+  background-color: #fff;
+  border-radius: 5rpx;
+}
+.mine_title .recharge image{
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.mine_body{
+  padding: 0 30rpx;
+  position: relative;
+  top: -80rpx;
+}
+/* 公共样式 */
+.bgfff{
+  background-color: #fff;
+}
+.br_10{
+  border-radius: 10rpx;
+}
+.mine_body .i_have{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 40rpx 0;
+}
+.money{
+  border-right: 1px solid #ccc;
+}
+.mine_body .i_have>view{
+  text-align: center;
+  flex: 1;
+  height: 100%;
+}
+.i_property{
+  width: 100%;
+  height: 240rpx;
+  padding: 20rpx 30rpx;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+}
+.i_property .prop_list{
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  text-align: center;
+  margin-top: 40rpx;
+}
+.i_property .prop_list view>image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.i_list{
+  width: 100%;
+  height: 600rpx;
+  margin-top: 20rpx;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+}
+.i_list .sub{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+.i_list .sub image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.i_list .sub .tojump{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-top: 12rpx;
+}
+.i_list .sub > view{
+  margin-left: -150px;
+  line-height: 60rpx;
+}
+
+
+
+
+

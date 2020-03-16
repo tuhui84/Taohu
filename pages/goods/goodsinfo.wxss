@@ -1,4 +1,5 @@
 /* pages/goods/goodsinfo.wxss */
+@import "./template/spell.wxss";
 .padd_l_r{
   padding-left: 28rpx;
   padding-right: 28rpx;
@@ -55,7 +56,7 @@ swiper{
 }
 .sketch .goods_price .pricenow{
   display: inline;
-  font-size: 20rpx;
+  font-size: 24rpx;
   text-align: center;
   color: #E22626;
 }
@@ -65,7 +66,7 @@ swiper{
 }
 .sketch .goods_price .priceold{
   display: inline;
-  font-size: 20rpx;
+  font-size: 24rpx;
   color: #999;
   margin-left: 12rpx;
   text-decoration:line-through;
@@ -200,21 +201,47 @@ swiper{
   background-color: #fff;
 }
 .togar_buy .footbox{
-  background-color: #ccc;
+  background-color: #fff;
   display: flex;
   justify-content: space-around;
   box-sizing: border-box;
-  padding: 10rpx 0;
+  border-top: 2rpx solid #E1E1E1;
+}
+.togar_buy .footbox .toshop{
+  flex: 1;
+  padding: 14rpx 0;
+}
+.togar_buy .footbox .coll{
+  flex: 1;
+  padding: 14rpx 0;
 }
 .togar_buy .footbox .toshop image{
   width: 40rpx;
   height: 40rpx;
 }
-.togar_buy .footbox .addcar{
-  line-height: 82rpx;
+.togar_buy .footbox .coll image{
+  width: 40rpx;
+  height: 40rpx;
 }
-.togar_buy .footbox .nowbuy{
-  line-height: 82rpx;
+.togar_buy .footbox .leftbtn{
+  line-height: 106rpx;
+  background-color: #EDEDED;
+  flex: 2;
+  font-size: 36rpx;
+}
+.togar_buy .footbox .alonebuy{
+  line-height: 53rpx;
+  font-size: 30rpx;
+}
+.togar_buy .footbox .rightbtn{
+  line-height: 106rpx;
+  flex: 2;
+  background-color: #FFC600;
+  font-size: 36rpx;
+}
+.togar_buy .footbox .spellbuy{
+  line-height: 53rpx;
+  font-size: 30rpx;
 }
 .togar_buy .footbox>view{
   text-align: center;
@@ -342,4 +369,60 @@ swiper{
   line-height: 72rpx;
   border-radius: 40rpx;
 }
-
+.spellinfo{
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+.spellinfo .title{
+  font-size: 32rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 28rpx;
+}
+.spellinfo .title .seeall{
+  font-size: 28rpx;
+  color: #999999;
+}
+.spellinfo .spelluser{
+  padding: 20rpx 28rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.spellinfo .spelluser image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  vertical-align: center;
+}
+.spellinfo .spelluser .userinfo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.spellinfo .spelluser .userinfo view{
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+.spellinfo .join_seeall{
+  text-align: center;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.spellinfo .join_seeall .diff_time view:nth-child(2){
+  color: #999;
+  font-size: 26rpx;
+}
+.gospell{
+  background-color: #FFC600;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  width: 140rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+  
+}
